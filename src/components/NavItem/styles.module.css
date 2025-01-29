@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  list-style: none;
+  transition: all 250ms;
+
+  &:hover {
+    background-color: rgb(28 28 29/1);
+    color: rgb(214 214 214/1);
+    transition: all 250ms;
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    padding: 0.6rem;
+
+    span {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgb(214, 211, 211);
+    }
+
+    &:hover {
+      color: rgb(214, 211, 211);
+    }
+  }
+}
+
+.container[data-active="true"] {
+  background-color: #1c6013;
+
+  &:hover {
+    background-color: #228115;
+    transition: all 250ms;
+  }
+}

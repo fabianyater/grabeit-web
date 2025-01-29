@@ -1,0 +1,111 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: #000;
+  border: 1px solid #383838;
+  transition: all 250ms;
+  color: #fff;
+  cursor: pointer;
+  gap: 0;
+
+  &:hover {
+    background-color: #1c1c1d;
+  }
+
+  .cardHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+
+    .listInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.8rem;
+        color: #929191;
+      }
+    }
+
+    .itemsInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #929191;
+      }
+    }
+  }
+
+  .cardBody {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.05s ease-in-out, opacity 0.3s ease-in-out;
+
+    .avatars {
+      width: max-content;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: #ccc;
+        display: inline-block;
+        position: relative;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+        -webkit-transition: 0.2s ease;
+        transition: 0.2s ease;
+        overflow: hidden;
+
+        &:nth-child(n + 2) {
+          margin-left: -15px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:hover {
+        .avatar {
+          &:nth-child(n + 2) {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    &[data-active="true"] {
+      max-height: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.card[data-active="true"] {
+  border: 1px solid #237019;
+  background-color: #1c1c1d;
+  gap: 1rem;
+}

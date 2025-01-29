@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.textButton {
+  background-color: transparent;
+}
+
+.iconOnlyButton {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+.medium {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+.large {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+.customPadding {
+  padding: var(--custom-padding, 1rem);
+}
+
+.customFontSize {
+  font-size: var(--custom-font-size, 1rem);
+}
+
+.customBackground {
+  background-color: var(--custom-bg-color, #007bff);
+}
+
+.customTextColor {
+  color: var(--custom-text-color, white);
+}
+
+.customBorderRadius {
+  border-radius: var(--custom-border-radius, 0.5rem);
+}
+
+.customBorder {
+  border: var(--custom-border, 1px solid #007bff);
+}
+
+.customHoverBackground:hover {
+  background-color: var(--custom-hover-bg-color, #0a31df);
+}
+
+.customIconSize svg {
+  width: var(--custom-icon-size, 1.5rem);
+  height: var(--custom-icon-size, 1.5rem);
+}

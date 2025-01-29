@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .section {
+    width: 50%;
+    height: 100%;
+    padding: 0 7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #0f28b8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+    &:first-child {
+      background-color: #000000;
+      color: #fff;
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: auto 15px 15px auto;
+        width: 250px;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid #6e6e6e;
+        background-color: #323232;
+        box-shadow: 4px 4px #1d1d1d;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--font-color);
+        cursor: pointer;
+        transition: all 250ms;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0;
+          background-color: #1d1d1d;
+          z-index: -1;
+          -webkit-box-shadow: 4px 8px 19px -3px #00000045;
+          box-shadow: 4px 8px 19px -3px #00000045;
+          transition: all 250ms;
+        }
+
+        &:hover {
+          color: #e8e8e8;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    &:last-child {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: clamp(1.8rem, 5vw, 3.5rem);
+        font-weight: 900;
+        color: #fff;
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-wrap: pretty;
+        color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .section {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .section {
+      width: 100%;
+      padding: 2rem;
+
+      &:first-child {
+        .button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.subtitle {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  color: #b9b9b9;
+  
+  span {
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+p {
+  color: #b9b9b9;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  button {
+   width: 50%;
+   font-size: 0.9rem;
+  }
+}
